@@ -1,0 +1,9 @@
+{
+  "name": "aula-evaluacion-dgas",
+  "version": "1.0.0",
+  "description": "Sistema de evaluación DGAS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
