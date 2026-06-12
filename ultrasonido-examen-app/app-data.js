@@ -1,0 +1,2246 @@
+window.EXAM_DATA = {
+  "course": "Curso Introductorio de Ultrasonido",
+  "examTitle": "Examen Final de Ultrasonografia para Medicos Pasantes",
+  "questions": [
+    {
+      "id": 1,
+      "prompt": "¿Cuál definición describe mejor al ultrasonido diagnóstico?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ondas mecánicas con frecuencia superior a 20 kHz, generadas por un cristal piezoeléctrico y transmitidas por tejidos."
+        },
+        {
+          "key": "B",
+          "text": "Radiación ionizante de baja energía usada para formar cortes corporales."
+        },
+        {
+          "key": "C",
+          "text": "Ondas electromagnéticas de alta frecuencia que no requieren medio de propagación."
+        },
+        {
+          "key": "D",
+          "text": "Sonido audible amplificado por una computadora."
+        }
+      ],
+      "correct": "A",
+      "feedback": "El ultrasonido es una onda mecánica; requiere un medio material y supera el rango audible humano.",
+      "images": []
+    },
+    {
+      "id": 2,
+      "prompt": "En ecografía, la frecuencia se define como:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Número de ciclos por segundo de la onda sonora."
+        },
+        {
+          "key": "B",
+          "text": "Distancia entre la sonda y la estructura explorada."
+        },
+        {
+          "key": "C",
+          "text": "Pérdida de energía por absorción tisular."
+        },
+        {
+          "key": "D",
+          "text": "Resistencia del tejido al paso del ultrasonido."
+        }
+      ],
+      "correct": "A",
+      "feedback": "La frecuencia se mide en hertz; en diagnóstico suele expresarse en MHz.",
+      "images": []
+    },
+    {
+      "id": 3,
+      "prompt": "Observe la imagen. ¿Qué elemento marcado por la barra horizontal representa la distancia de un ciclo completo?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Longitud de onda."
+        },
+        {
+          "key": "B",
+          "text": "Amplitud."
+        },
+        {
+          "key": "C",
+          "text": "Impedancia acústica."
+        },
+        {
+          "key": "D",
+          "text": "Atenuación."
+        }
+      ],
+      "correct": "A",
+      "feedback": "La longitud de onda es la distancia necesaria para completar un ciclo de la onda.",
+      "images": [
+        "assets/reactivo-03-1.png"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "¿Qué relación práctica existe entre frecuencia y resolución/profundidad?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A mayor frecuencia, mejor resolución superficial y menor penetración."
+        },
+        {
+          "key": "B",
+          "text": "A mayor frecuencia, peor resolución y mayor penetración."
+        },
+        {
+          "key": "C",
+          "text": "La frecuencia no modifica la imagen."
+        },
+        {
+          "key": "D",
+          "text": "La frecuencia solo sirve para activar Doppler color."
+        }
+      ],
+      "correct": "A",
+      "feedback": "Las sondas de alta frecuencia son ideales para estructuras superficiales; las de baja frecuencia penetran más.",
+      "images": []
+    },
+    {
+      "id": 5,
+      "prompt": "¿Cuál velocidad se utiliza habitualmente como promedio del sonido en tejidos blandos?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1540 m/s."
+        },
+        {
+          "key": "B",
+          "text": "332 m/s."
+        },
+        {
+          "key": "C",
+          "text": "3600 m/s."
+        },
+        {
+          "key": "D",
+          "text": "20,000 m/s."
+        }
+      ],
+      "correct": "A",
+      "feedback": "Los ecógrafos asumen aproximadamente 1540 m/s para calcular profundidad en tejidos blandos.",
+      "images": []
+    },
+    {
+      "id": 6,
+      "prompt": "¿Qué es la impedancia acústica?",
+      "options": [
+        {
+          "key": "A",
+          "text": "La resistencia de un medio al paso del ultrasonido, relacionada con densidad y velocidad."
+        },
+        {
+          "key": "B",
+          "text": "El brillo global de toda la pantalla."
+        },
+        {
+          "key": "C",
+          "text": "El número de imágenes por segundo."
+        },
+        {
+          "key": "D",
+          "text": "La capacidad de la sonda para esterilizarse."
+        }
+      ],
+      "correct": "A",
+      "feedback": "Las diferencias de impedancia entre tejidos producen interfaces reflectantes.",
+      "images": []
+    },
+    {
+      "id": 7,
+      "prompt": "¿Qué sucede cuando el haz ultrasónico encuentra una gran diferencia de impedancia, como tejido-aire?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Se refleja gran parte del haz y se limita la visualización profunda."
+        },
+        {
+          "key": "B",
+          "text": "Desaparece toda sombra y mejora la transmisión."
+        },
+        {
+          "key": "C",
+          "text": "Aumenta siempre la profundidad útil."
+        },
+        {
+          "key": "D",
+          "text": "Se convierte en radiación ionizante."
+        }
+      ],
+      "correct": "A",
+      "feedback": "El aire dificulta la ecografía porque produce gran reflexión y dispersión.",
+      "images": []
+    },
+    {
+      "id": 8,
+      "prompt": "En la imagen, ¿qué elección de sonda sería más adecuada para abdomen en un adulto promedio?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Transductor convexo de baja frecuencia."
+        },
+        {
+          "key": "B",
+          "text": "Transductor lineal de muy alta frecuencia."
+        },
+        {
+          "key": "C",
+          "text": "Transductor endocavitario exclusivamente."
+        },
+        {
+          "key": "D",
+          "text": "Cualquier sonda produce la misma imagen."
+        }
+      ],
+      "correct": "A",
+      "feedback": "Para abdomen se busca mayor penetración, por lo que se prefiere un transductor convexo.",
+      "images": [
+        "assets/reactivo-08-1.png"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "¿Cuál es la función principal del gel ecográfico?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Eliminar aire entre la sonda y la piel para permitir transmisión acústica."
+        },
+        {
+          "key": "B",
+          "text": "Anestesiar la piel antes del estudio."
+        },
+        {
+          "key": "C",
+          "text": "Aumentar la radiación de la sonda."
+        },
+        {
+          "key": "D",
+          "text": "Cambiar el diagnóstico Doppler automáticamente."
+        }
+      ],
+      "correct": "A",
+      "feedback": "El aire es un mal transmisor del ultrasonido; el gel mejora el acoplamiento acústico.",
+      "images": []
+    },
+    {
+      "id": 10,
+      "prompt": "¿Qué ajuste debe modificarse si las estructuras profundas se ven muy oscuras respecto de las superficiales?",
+      "options": [
+        {
+          "key": "A",
+          "text": "TGC o ganancia compensada en profundidad."
+        },
+        {
+          "key": "B",
+          "text": "Freeze."
+        },
+        {
+          "key": "C",
+          "text": "Marcador de la sonda."
+        },
+        {
+          "key": "D",
+          "text": "Caliper de medición."
+        }
+      ],
+      "correct": "A",
+      "feedback": "La TGC compensa la atenuación progresiva del haz con la profundidad.",
+      "images": [
+        "assets/reactivo-10-1.png"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "¿Qué modo ecográfico muestra una imagen bidimensional en escala de grises?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Modo B."
+        },
+        {
+          "key": "B",
+          "text": "Modo M."
+        },
+        {
+          "key": "C",
+          "text": "Doppler pulsado."
+        },
+        {
+          "key": "D",
+          "text": "Doppler continuo."
+        }
+      ],
+      "correct": "A",
+      "feedback": "El modo B es el modo básico para formar la imagen anatómica en tiempo real.",
+      "images": []
+    },
+    {
+      "id": 12,
+      "prompt": "¿Qué describe mejor al modo M?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Registro del movimiento de una línea de exploración a través del tiempo."
+        },
+        {
+          "key": "B",
+          "text": "Reconstrucción tridimensional obligatoria."
+        },
+        {
+          "key": "C",
+          "text": "Mapa de temperatura corporal."
+        },
+        {
+          "key": "D",
+          "text": "Ecografía sin imagen visible."
+        }
+      ],
+      "correct": "A",
+      "feedback": "El modo M es útil para estructuras móviles, especialmente en ecocardiografía.",
+      "images": []
+    },
+    {
+      "id": 13,
+      "prompt": "¿Qué evalúa principalmente el Doppler color?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dirección y presencia relativa de flujo sanguíneo sobre la imagen."
+        },
+        {
+          "key": "B",
+          "text": "Dureza del hueso cortical."
+        },
+        {
+          "key": "C",
+          "text": "Concentración de glucosa."
+        },
+        {
+          "key": "D",
+          "text": "Temperatura de la piel."
+        }
+      ],
+      "correct": "A",
+      "feedback": "El Doppler color ayuda a identificar flujo y su dirección relativa según la codificación del equipo.",
+      "images": []
+    },
+    {
+      "id": 14,
+      "prompt": "¿Cuál maniobra mejora la imagen cuando hay gas intestinal interpuesto?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cambiar el ángulo/posición de la sonda y usar ventanas acústicas."
+        },
+        {
+          "key": "B",
+          "text": "Subir todo el brillo hasta saturar la pantalla."
+        },
+        {
+          "key": "C",
+          "text": "Apagar la profundidad."
+        },
+        {
+          "key": "D",
+          "text": "Retirar siempre el gel."
+        }
+      ],
+      "correct": "A",
+      "feedback": "Los principiantes deben buscar ventanas y ajustar posición; no todo se arregla a golpe de botones.",
+      "images": []
+    },
+    {
+      "id": 15,
+      "prompt": "Observe la imagen. El área negra posterior a una estructura hiperecogénica corresponde a:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sombra acústica posterior."
+        },
+        {
+          "key": "B",
+          "text": "Refuerzo posterior."
+        },
+        {
+          "key": "C",
+          "text": "Artefacto en espejo."
+        },
+        {
+          "key": "D",
+          "text": "Línea B pulmonar."
+        }
+      ],
+      "correct": "A",
+      "feedback": "La sombra aparece cuando una estructura atenúa o refleja fuertemente el haz, como cálculo o hueso.",
+      "images": [
+        "assets/reactivo-15-1.png"
+      ]
+    },
+    {
+      "id": 16,
+      "prompt": "Observe la imagen. El aumento de brillo profundo a una lesión anecoica sugiere:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Refuerzo acústico posterior."
+        },
+        {
+          "key": "B",
+          "text": "Sombra acústica limpia."
+        },
+        {
+          "key": "C",
+          "text": "Anisotropía."
+        },
+        {
+          "key": "D",
+          "text": "Reverberación por metal."
+        }
+      ],
+      "correct": "A",
+      "feedback": "El líquido transmite bien el ultrasonido; por eso lo profundo puede verse más brillante.",
+      "images": [
+        "assets/reactivo-16-1.png"
+      ]
+    },
+    {
+      "id": 17,
+      "prompt": "Una estructura anecoica se observa típicamente:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Negra, sin ecos internos."
+        },
+        {
+          "key": "B",
+          "text": "Blanca intensa con sombra siempre."
+        },
+        {
+          "key": "C",
+          "text": "Gris igual que el hígado."
+        },
+        {
+          "key": "D",
+          "text": "Con color Doppler obligatorio."
+        }
+      ],
+      "correct": "A",
+      "feedback": "El líquido simple suele ser anecoico; el contexto anatómico decide su significado.",
+      "images": []
+    },
+    {
+      "id": 18,
+      "prompt": "Una estructura hiperecogénica se observa:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Más brillante que los tejidos vecinos."
+        },
+        {
+          "key": "B",
+          "text": "Más negra que todo el campo."
+        },
+        {
+          "key": "C",
+          "text": "Invisible en modo B."
+        },
+        {
+          "key": "D",
+          "text": "Solo durante apnea."
+        }
+      ],
+      "correct": "A",
+      "feedback": "Hiperecogénico significa mayor retorno de ecos y mayor brillo.",
+      "images": []
+    },
+    {
+      "id": 19,
+      "prompt": "¿Qué artefacto puede producir líneas repetidas paralelas por rebotes múltiples del haz?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Reverberación."
+        },
+        {
+          "key": "B",
+          "text": "Refuerzo posterior."
+        },
+        {
+          "key": "C",
+          "text": "Ventana acústica."
+        },
+        {
+          "key": "D",
+          "text": "Atenuación homogénea normal."
+        }
+      ],
+      "correct": "A",
+      "feedback": "La reverberación se produce por reflexiones múltiples entre interfaces fuertes.",
+      "images": []
+    },
+    {
+      "id": 20,
+      "prompt": "La anisotropía es particularmente importante en músculo-esquelético porque:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tendones y nervios cambian su ecogenicidad si el haz no incide perpendicularmente."
+        },
+        {
+          "key": "B",
+          "text": "Siempre indica ruptura completa."
+        },
+        {
+          "key": "C",
+          "text": "Elimina la necesidad de conocer anatomía."
+        },
+        {
+          "key": "D",
+          "text": "Solo ocurre en vesícula biliar."
+        }
+      ],
+      "correct": "A",
+      "feedback": "Un cambio leve de ángulo puede simular patología; el operador tiene que domar la sonda, no pelearse con ella.",
+      "images": []
+    },
+    {
+      "id": 21,
+      "prompt": "En el protocolo FAST, la ventana hepatorrenal busca principalmente:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Líquido libre en el receso de Morrison/cuadrante superior derecho."
+        },
+        {
+          "key": "B",
+          "text": "Cálculos dentro de la vesícula exclusivamente."
+        },
+        {
+          "key": "C",
+          "text": "Medir la próstata."
+        },
+        {
+          "key": "D",
+          "text": "Valorar tendones del hombro."
+        }
+      ],
+      "correct": "A",
+      "feedback": "En trauma, el líquido libre puede acumularse en espacios dependientes como el hepatorrenal.",
+      "images": []
+    },
+    {
+      "id": 22,
+      "prompt": "Observe la imagen FAST. El hallazgo anecoico entre hígado y riñón debe hacer sospechar:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Líquido libre intraperitoneal."
+        },
+        {
+          "key": "B",
+          "text": "Cálculo vesicular único."
+        },
+        {
+          "key": "C",
+          "text": "Hidronefrosis leve."
+        },
+        {
+          "key": "D",
+          "text": "Aire subcutáneo."
+        }
+      ],
+      "correct": "A",
+      "feedback": "En la ventana hepatorrenal, una colección anecoica en el espacio de Morrison es compatible con líquido libre.",
+      "images": [
+        "assets/reactivo-22-1.png"
+      ]
+    },
+    {
+      "id": 23,
+      "prompt": "¿Cuáles son ventanas clásicas del FAST abdominal?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Perihepática, periesplénica, suprapúbica y subxifoidea/pericárdica."
+        },
+        {
+          "key": "B",
+          "text": "Tiroides, carótida, testicular y ocular."
+        },
+        {
+          "key": "C",
+          "text": "Codo, rodilla, muñeca y tobillo."
+        },
+        {
+          "key": "D",
+          "text": "Solo vesícula y páncreas."
+        }
+      ],
+      "correct": "A",
+      "feedback": "FAST es un examen focalizado para líquido libre y pericardio en el contexto adecuado.",
+      "images": []
+    },
+    {
+      "id": 24,
+      "prompt": "En vesícula biliar, ¿qué hallazgo es típico de colelitiasis?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Focos hiperecogénicos móviles con sombra acústica posterior."
+        },
+        {
+          "key": "B",
+          "text": "Pared vesicular invisible sin contenido."
+        },
+        {
+          "key": "C",
+          "text": "Riñón aumentado de tamaño."
+        },
+        {
+          "key": "D",
+          "text": "Líneas B verticales."
+        }
+      ],
+      "correct": "A",
+      "feedback": "Los cálculos suelen ser brillantes y proyectar sombra posterior.",
+      "images": []
+    },
+    {
+      "id": 25,
+      "prompt": "Observe la imagen. El diagnóstico ecográfico más probable es:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Colelitiasis."
+        },
+        {
+          "key": "B",
+          "text": "Hidronefrosis."
+        },
+        {
+          "key": "C",
+          "text": "Derrame pericárdico."
+        },
+        {
+          "key": "D",
+          "text": "Aneurisma de aorta."
+        }
+      ],
+      "correct": "A",
+      "feedback": "La imagen muestra estructuras hiperecogénicas dependientes dentro de vesícula con sombra posterior.",
+      "images": [
+        "assets/reactivo-25-1.png"
+      ]
+    },
+    {
+      "id": 26,
+      "prompt": "¿Qué signo aumenta la sospecha de colecistitis aguda al explorar vesícula?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Murphy ecográfico positivo."
+        },
+        {
+          "key": "B",
+          "text": "Ausencia de gel."
+        },
+        {
+          "key": "C",
+          "text": "Sonda lineal obligatoria."
+        },
+        {
+          "key": "D",
+          "text": "Frecuencia de 50 MHz en abdomen."
+        }
+      ],
+      "correct": "A",
+      "feedback": "Dolor máximo al comprimir con la sonda sobre la vesícula apoya inflamación vesicular.",
+      "images": []
+    },
+    {
+      "id": 27,
+      "prompt": "En riñón, la hidronefrosis se reconoce por:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dilatación anecoica del sistema pielocalicial."
+        },
+        {
+          "key": "B",
+          "text": "Sombra limpia por un hueso."
+        },
+        {
+          "key": "C",
+          "text": "Engrosamiento pleural."
+        },
+        {
+          "key": "D",
+          "text": "Ausencia de vejiga en todos los casos."
+        }
+      ],
+      "correct": "A",
+      "feedback": "El sistema colector dilatado se ve negro/anecoico dentro del seno renal.",
+      "images": []
+    },
+    {
+      "id": 28,
+      "prompt": "Observe la imagen. ¿Qué hallazgo representa?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hidronefrosis."
+        },
+        {
+          "key": "B",
+          "text": "Vesícula normal."
+        },
+        {
+          "key": "C",
+          "text": "Líneas A pulmonares."
+        },
+        {
+          "key": "D",
+          "text": "Trombosis venosa profunda."
+        }
+      ],
+      "correct": "A",
+      "feedback": "Las áreas anecoicas centrales y caliciales sugieren dilatación del sistema colector.",
+      "images": [
+        "assets/reactivo-28-1.png"
+      ]
+    },
+    {
+      "id": 29,
+      "prompt": "Para estimar volumen vesical se utilizan mediciones de:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Largo, ancho y alto."
+        },
+        {
+          "key": "B",
+          "text": "Solo grosor de la pared abdominal."
+        },
+        {
+          "key": "C",
+          "text": "Frecuencia y ganancia."
+        },
+        {
+          "key": "D",
+          "text": "Temperatura y saturación."
+        }
+      ],
+      "correct": "A",
+      "feedback": "El volumen vesical se estima con dimensiones ortogonales y una constante según fórmula del equipo.",
+      "images": []
+    },
+    {
+      "id": 30,
+      "prompt": "En aorta abdominal, el objetivo inicial en urgencias suele ser:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Identificar o descartar aneurisma de aorta abdominal infrarrenal."
+        },
+        {
+          "key": "B",
+          "text": "Medir la vesícula biliar."
+        },
+        {
+          "key": "C",
+          "text": "Diagnosticar neumotórax."
+        },
+        {
+          "key": "D",
+          "text": "Cuantificar grasa subcutánea."
+        }
+      ],
+      "correct": "A",
+      "feedback": "La ecografía focalizada puede identificar dilatación aneurismática de la aorta abdominal.",
+      "images": []
+    },
+    {
+      "id": 31,
+      "prompt": "¿Dónde se mide el diámetro de la aorta para buscar aneurisma?",
+      "options": [
+        {
+          "key": "A",
+          "text": "De pared externa a pared externa, idealmente en cortes transversales y longitudinales."
+        },
+        {
+          "key": "B",
+          "text": "Solo la luz interna con Doppler color."
+        },
+        {
+          "key": "C",
+          "text": "En cualquier vaso venoso cercano."
+        },
+        {
+          "key": "D",
+          "text": "Sobre el borde de la imagen sin identificar estructuras."
+        }
+      ],
+      "correct": "A",
+      "feedback": "La medición estándar del diámetro aórtico debe incluir toda la pared vascular.",
+      "images": []
+    },
+    {
+      "id": 32,
+      "prompt": "La vena cava inferior en POCUS se usa principalmente como apoyo para valorar:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Estado de volumen/presión venosa en contexto clínico."
+        },
+        {
+          "key": "B",
+          "text": "Presencia de cálculos renales."
+        },
+        {
+          "key": "C",
+          "text": "Rotura de tendón de Aquiles."
+        },
+        {
+          "key": "D",
+          "text": "Edad gestacional."
+        }
+      ],
+      "correct": "A",
+      "feedback": "La VCI puede orientar, pero siempre debe interpretarse con el cuadro clínico.",
+      "images": []
+    },
+    {
+      "id": 33,
+      "prompt": "Observe la imagen. ¿Qué estructura y acción se ilustran?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Medición del diámetro de la vena cava inferior."
+        },
+        {
+          "key": "B",
+          "text": "Medición de un cálculo vesicular."
+        },
+        {
+          "key": "C",
+          "text": "Medición de líquido pleural."
+        },
+        {
+          "key": "D",
+          "text": "Medición de un tendón."
+        }
+      ],
+      "correct": "A",
+      "feedback": "La línea representa el diámetro de la VCI en eje largo, útil como dato hemodinámico complementario.",
+      "images": [
+        "assets/reactivo-33-1.png"
+      ]
+    },
+    {
+      "id": 34,
+      "prompt": "En ecografía pulmonar normal predominan:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Líneas A horizontales con deslizamiento pleural."
+        },
+        {
+          "key": "B",
+          "text": "Líneas B numerosas en todos los campos."
+        },
+        {
+          "key": "C",
+          "text": "Sombra de vesícula."
+        },
+        {
+          "key": "D",
+          "text": "Hidronefrosis bilateral."
+        }
+      ],
+      "correct": "A",
+      "feedback": "El patrón normal suele tener línea pleural deslizante y artefactos horizontales tipo líneas A.",
+      "images": []
+    },
+    {
+      "id": 35,
+      "prompt": "Observe la imagen. Las líneas verticales que nacen de la pleura y llegan al fondo corresponden a:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Líneas B."
+        },
+        {
+          "key": "B",
+          "text": "Cálculos biliares."
+        },
+        {
+          "key": "C",
+          "text": "Sombra acústica."
+        },
+        {
+          "key": "D",
+          "text": "Aorta en eje corto."
+        }
+      ],
+      "correct": "A",
+      "feedback": "Las líneas B son artefactos verticales asociados a aumento de agua/intersticio, según distribución y contexto.",
+      "images": [
+        "assets/reactivo-35-1.png"
+      ]
+    },
+    {
+      "id": 36,
+      "prompt": "¿Qué hallazgo apoya neumotórax en ecografía pulmonar?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ausencia de deslizamiento pleural con hallazgos compatibles en el contexto clínico."
+        },
+        {
+          "key": "B",
+          "text": "Refuerzo posterior detrás de la vejiga."
+        },
+        {
+          "key": "C",
+          "text": "Cálculo móvil en vesícula."
+        },
+        {
+          "key": "D",
+          "text": "Dilatación pielocalicial."
+        }
+      ],
+      "correct": "A",
+      "feedback": "La ausencia de lung sliding orienta, aunque debe integrarse con otros signos como punto pulmonar y contexto.",
+      "images": []
+    },
+    {
+      "id": 37,
+      "prompt": "Para guiar un procedimiento con aguja, ¿cuál es una recomendación básica?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mantener visualizada la punta de la aguja y usar técnica estéril."
+        },
+        {
+          "key": "B",
+          "text": "Introducir la aguja sin identificar estructuras vecinas."
+        },
+        {
+          "key": "C",
+          "text": "Usar siempre máxima profundidad."
+        },
+        {
+          "key": "D",
+          "text": "Apagar la imagen antes de puncionar."
+        }
+      ],
+      "correct": "A",
+      "feedback": "La seguridad depende de ver la aguja, identificar vasos/órganos y respetar técnica aséptica.",
+      "images": []
+    },
+    {
+      "id": 38,
+      "prompt": "¿Cuál es una limitación importante de la ecografía?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Es dependiente del operador y de la ventana acústica."
+        },
+        {
+          "key": "B",
+          "text": "Siempre emite radiación ionizante."
+        },
+        {
+          "key": "C",
+          "text": "No permite estudios dinámicos."
+        },
+        {
+          "key": "D",
+          "text": "No puede repetirse."
+        }
+      ],
+      "correct": "A",
+      "feedback": "La calidad depende de entrenamiento, técnica, paciente y ventana acústica.",
+      "images": []
+    },
+    {
+      "id": 39,
+      "prompt": "¿Qué principio de seguridad resume mejor el uso diagnóstico del ultrasonido?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Usar la menor exposición razonable para obtener la información necesaria."
+        },
+        {
+          "key": "B",
+          "text": "Aumentar siempre potencia y tiempo para mejorar imagen."
+        },
+        {
+          "key": "C",
+          "text": "Evitar gel para reducir energía."
+        },
+        {
+          "key": "D",
+          "text": "Usar Doppler en todo paciente sin indicación."
+        }
+      ],
+      "correct": "A",
+      "feedback": "La seguridad se basa en optimizar imagen con exposición razonable, especialmente en exploraciones sensibles.",
+      "images": []
+    },
+    {
+      "id": 40,
+      "prompt": "Al documentar un estudio ecográfico básico, ¿qué debe registrarse como mínimo?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Indicación, región explorada, hallazgos relevantes, interpretación y limitaciones."
+        },
+        {
+          "key": "B",
+          "text": "Solo el nombre comercial del ecógrafo."
+        },
+        {
+          "key": "C",
+          "text": "Únicamente la hora de inicio."
+        },
+        {
+          "key": "D",
+          "text": "Nada si el estudio fue normal."
+        }
+      ],
+      "correct": "A",
+      "feedback": "Un reporte útil debe incluir la indicación, la región explorada, los hallazgos relevantes, la interpretación y cualquier limitación del estudio.",
+      "images": []
+    }
+  ],
+  "participants": [
+    {
+      "id": "GUTIERREZCANCINONATHALYDANIELA",
+      "folio": "CMU-008",
+      "name": "GUTIERREZ CANCINO NATHALY DANIELA",
+      "career": "ENFERMERIA",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 13 MAYO (2)",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 03 JUNIO",
+          "date": "03 DE JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U001"
+    },
+    {
+      "id": "JAIMESCASTROBRENDAGUADALUPE",
+      "folio": "CMU-009",
+      "name": "JAIMES CASTRO BRENDA GUADALUPE",
+      "career": "ENFERMERIA",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 13 MAYO (2)",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 03 JUNIO",
+          "date": "03 DE JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U002"
+    },
+    {
+      "id": "MOLINAALFAROFATIMA",
+      "folio": "CMU-010",
+      "name": "MOLINA ALFARO FATIMA",
+      "career": "ENFERMERIA",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 13 MAYO (2)",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 03 JUNIO",
+          "date": "03 DE JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U003"
+    },
+    {
+      "id": "SEGURAROMEROCRISTIANALEJANDRO",
+      "folio": "CMU-011",
+      "name": "SEGURA ROMERO CRISTIAN ALEJANDRO",
+      "career": "ENFERMERIA",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 13 MAYO (2)",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 03 JUNIO",
+          "date": "03 DE JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U004"
+    },
+    {
+      "id": "TOTOHERNANDEZSANTIAGODEJESUS",
+      "folio": "CMU-012",
+      "name": "TOTO HERNANDEZ SANTIAGO DE JESUS",
+      "career": "ENFERMERIA",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 13 MAYO (2)",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 03 JUNIO",
+          "date": "03 DE JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U005"
+    },
+    {
+      "id": "DELVALLEGUTIERREZVALESKA",
+      "folio": "CMU-001",
+      "name": "DEL VALLE GUTIERREZ VALESKA",
+      "career": "MEDICINA",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 13 MAYO (2)",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 03 JUNIO",
+          "date": "03 DE JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U006"
+    },
+    {
+      "id": "LEONROSASDAFNESOFIA",
+      "folio": "CMU-002",
+      "name": "LEON ROSAS DAFNE SOFIA",
+      "career": "MEDICINA",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 13 MAYO (2)",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 03 JUNIO",
+          "date": "03 DE JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U007"
+    },
+    {
+      "id": "MONDRAGONMONTOYANANCY",
+      "folio": "CMU-003",
+      "name": "MONDRAGON MONTOYA NANCY",
+      "career": "MEDICINA",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 13 MAYO (2)",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 03 JUNIO",
+          "date": "03 DE JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U008"
+    },
+    {
+      "id": "MONTESDEOCACUADROSPAOLAALEJANDRA",
+      "folio": "CMU-004",
+      "name": "MONTES DE OCA CUADROS PAOLA ALEJANDRA",
+      "career": "MEDICINA",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 13 MAYO (2)",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "sin registro"
+        },
+        {
+          "sheet": "CMU 03 JUNIO",
+          "date": "03 DE JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U009"
+    },
+    {
+      "id": "MURGUIAGARIBAYJESUSIVAN",
+      "folio": "CMU-005",
+      "name": "MURGUIA GARIBAY JESUS IVAN",
+      "career": "MEDICINA",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 13 MAYO (2)",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 03 JUNIO",
+          "date": "03 DE JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U010"
+    },
+    {
+      "id": "PORFIRIOMELOJASID",
+      "folio": "CMU-006",
+      "name": "PORFIRIO MELO JASID",
+      "career": "MEDICINA",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 13 MAYO (2)",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 03 JUNIO",
+          "date": "03 DE JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U011"
+    },
+    {
+      "id": "SERRAROMANMEZLI",
+      "folio": "CMU-007",
+      "name": "SERRA ROMAN MEZLI",
+      "career": "MEDICINA",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 13 MAYO (2)",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 03 JUNIO",
+          "date": "03 DE JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U012"
+    },
+    {
+      "id": "GRANADOSACOSTAANDREA",
+      "folio": "CMU-013",
+      "name": "GRANADOS ACOSTA ANDREA",
+      "career": "ODONTOLOGÍA",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 13 MAYO (2)",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 03 JUNIO",
+          "date": "03 DE JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U013"
+    },
+    {
+      "id": "GARCIAVARGASDENNISE",
+      "folio": "CMU-014",
+      "name": "GARCIA VARGAS DENNISE",
+      "career": "RX",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 13 MAYO (2)",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 03 JUNIO",
+          "date": "03 DE JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U014"
+    },
+    {
+      "id": "HERNANDEZGARCIAAARON",
+      "folio": "CMU-015",
+      "name": "HERNANDEZ GARC IA AARON",
+      "career": "RX",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 13 MAYO (2)",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "CMU 03 JUNIO",
+          "date": "03 DE JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U015"
+    },
+    {
+      "id": "NEGRETEBASTIDAVALERIA",
+      "folio": "CMU-016",
+      "name": "NEGRETE BASTIDA VALERIA",
+      "career": "RX",
+      "site": "CMU",
+      "sessions": [
+        {
+          "sheet": "CMU 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        }
+      ],
+      "userNumber": "U016"
+    },
+    {
+      "id": "ARCOSORTEGATANIAOSIRIS",
+      "folio": "METROPOLI-027",
+      "name": "ARCOS ORTEGA TANIA OSIRIS",
+      "career": "ENFERMERIA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "sin registro"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U017"
+    },
+    {
+      "id": "BALSECASANTIAGOJEREMYDEJESUS",
+      "folio": "METROPOLI-028",
+      "name": "BALSECA SANTIAGO JEREMY DE JESÚS",
+      "career": "ENFERMERIA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "sin registro"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U018"
+    },
+    {
+      "id": "CAMPOSCAMPAANGELZURIEL",
+      "folio": "METROPOLI-029",
+      "name": "CAMPOS CAMPA ANGEL ZURIEL",
+      "career": "ENFERMERIA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U019"
+    },
+    {
+      "id": "CHIFERNANDEZENRIQUE",
+      "folio": "METROPOLI-030",
+      "name": "CHI FERNANDEZ ENRIQUE",
+      "career": "ENFERMERIA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U020"
+    },
+    {
+      "id": "CORONAGONZALEZSAMANTHA",
+      "folio": "METROPOLI-031",
+      "name": "CORONA GONZALEZ SAMANTHA",
+      "career": "ENFERMERIA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U021"
+    },
+    {
+      "id": "GARCIAHERRERAPAULINA",
+      "folio": "METROPOLI-032",
+      "name": "GARCIA HERRERA PAULINA",
+      "career": "ENFERMERIA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U022"
+    },
+    {
+      "id": "GARCIATREJOFRIDAGUADALUPE",
+      "folio": "METROPOLI-033",
+      "name": "GARCÍA TREJO FRIDA GUADALUPE",
+      "career": "ENFERMERIA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "sin registro"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U023"
+    },
+    {
+      "id": "HERNANDEZALVAREZMARIANA",
+      "folio": "METROPOLI-034",
+      "name": "HERNANDEZ ALVAREZ MARIANA",
+      "career": "ENFERMERIA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U024"
+    },
+    {
+      "id": "LECHUGASANTOSDIEGO",
+      "folio": "METROPOLI-035",
+      "name": "LECHUGA SANTOS DIEGO",
+      "career": "ENFERMERIA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U025"
+    },
+    {
+      "id": "MEJIARAMIREZROXANA",
+      "folio": "METROPOLI-036",
+      "name": "MEJIA RAMIREZ ROXANA",
+      "career": "ENFERMERIA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "sin registro"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "sin registro"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U026"
+    },
+    {
+      "id": "PINAMENDEZVICTORMANUEL",
+      "folio": "METROPOLI-037",
+      "name": "PIÑA MENDEZ VICTOR MANUEL",
+      "career": "ENFERMERIA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U027"
+    },
+    {
+      "id": "REYESLOPEZJESUSEMMANUEL",
+      "folio": "METROPOLI-038",
+      "name": "REYES LOPEZ JESUS EMMANUEL",
+      "career": "ENFERMERIA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "sin registro"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "sin registro"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U028"
+    },
+    {
+      "id": "SALINASMURGUIAMARIAMIREYA",
+      "folio": "METROPOLI-039",
+      "name": "SALINAS MURGUIA MARIA MIREYA",
+      "career": "ENFERMERIA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U029"
+    },
+    {
+      "id": "TORRESCONDEALMAROSA",
+      "folio": "METROPOLI-040",
+      "name": "TORRES CONDE ALMA ROSA",
+      "career": "ENFERMERIA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "sin registro"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U030"
+    },
+    {
+      "id": "ANGELINORODRIGUEZJANETH",
+      "folio": "METROPOLI-017",
+      "name": "ANGELINO RODRIGUEZ JANETH",
+      "career": "MEDICINA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U031"
+    },
+    {
+      "id": "ARGUELLESNAJERADULCEMARIA",
+      "folio": "METROPOLI-018",
+      "name": "ARGUELLES NAJERA DULCE MARIA",
+      "career": "MEDICINA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U032"
+    },
+    {
+      "id": "CHAVEZMARTINEZJOCELYNITZEL",
+      "folio": "METROPOLI-019",
+      "name": "CHAVEZ MARTINEZ JOCELYN ITZEL",
+      "career": "MEDICINA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U033"
+    },
+    {
+      "id": "CHAVEZMORENOCRISEL",
+      "folio": "METROPOLI-020",
+      "name": "CHAVEZ MORENO CRISEL",
+      "career": "MEDICINA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U034"
+    },
+    {
+      "id": "CORTESGARCIASANDRAPAOLA",
+      "folio": "METROPOLI-021",
+      "name": "CORTES GARCIA SANDRA PAOLA",
+      "career": "MEDICINA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "sin registro"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U035"
+    },
+    {
+      "id": "GAMEZMARTINEZDANIELA",
+      "folio": "METROPOLI-022",
+      "name": "GAMEZ MARTINEZ DANIELA",
+      "career": "MEDICINA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U036"
+    },
+    {
+      "id": "GUZMANCARRILLOMARIAFERNANDA",
+      "folio": "METROPOLI-023",
+      "name": "GUZMAN CARRILLO MARIA FERNANDA",
+      "career": "MEDICINA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U037"
+    },
+    {
+      "id": "JUAREZHERNANDEZPAMELAABIGAIL",
+      "folio": "METROPOLI-024",
+      "name": "JUAREZ HERNANDEZ PAMELA ABIGAIL",
+      "career": "MEDICINA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "sin registro"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U038"
+    },
+    {
+      "id": "MENDEZFERNANDEZANDREAITZEL",
+      "folio": "METROPOLI-025",
+      "name": "MENDEZ FERNANDEZ ANDREA ITZEL",
+      "career": "MEDICINA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U039"
+    },
+    {
+      "id": "MIGUELCUAPIOJOSEMARTIN",
+      "folio": "METROPOLI-026",
+      "name": "MIGUEL CUAPIO JOSE MARTIN",
+      "career": "MEDICINA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U040"
+    },
+    {
+      "id": "MANJARREZFLORESGEMMASARAI",
+      "folio": "METROPOLI-041",
+      "name": "MANJARREZ FLORES GEMMA SARAI",
+      "career": "ODONTOLOGIA",
+      "site": "METROPOLI",
+      "sessions": [
+        {
+          "sheet": "METROPOLI 13 MAYO",
+          "date": "13 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 20 MAYO",
+          "date": "20 MAYO 2026",
+          "status": "registrado"
+        },
+        {
+          "sheet": "METROPOLI 27 MAYO",
+          "date": "27 MAYO 2026",
+          "status": "sin registro"
+        },
+        {
+          "sheet": "METROPOLI 03 JUNIO",
+          "date": "03 JUNIO 2026",
+          "status": "sin registro"
+        }
+      ],
+      "userNumber": "U041"
+    }
+  ],
+  "platformName": "AulaPulso Evalua",
+  "organization": "Dirección General de Atención a la Salud",
+  "subtitle": "Plataforma de evaluación y mejora continua de cursos"
+};

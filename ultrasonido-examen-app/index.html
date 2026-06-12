@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AulaPulso Evalua | DGAS UNAM</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <div class="brand">
+          <img src="assets/unam-escudo-azul.webp" alt="Escudo UNAM" class="brand-mark unam" />
+          <div>
+            <p class="eyebrow" id="organizationName">Dirección General de Atención a la Salud</p>
+            <h1 id="platformName">AulaPulso Evalua</h1>
+            <p class="subtitle" id="courseSubtitle">Plataforma de evaluación y mejora continua de cursos</p>
+          </div>
+        </div>
+        <img src="assets/logo-salud-unam.png" alt="Salud UNAM" class="brand-mark salud" />
+      </header>
+
+      <nav class="app-tabs">
+        <a class="tab active" href="index.html">Participante</a>
+        <a class="tab" href="admin.html">Administrador</a>
+      </nav>
+
+      <main>
+        <section id="loginView" class="view panel login-grid">
+          <div class="intro">
+            <span class="pill cyan">Evaluación final</span>
+            <h2 id="courseName">Curso Introductorio de Ultrasonido</h2>
+            <p>
+              Ingresa con tu número de usuario y contraseña asignados. La lista oficial permanece visible para confirmar que todos los alumnos de CMU y planteles metropolitanos están cargados.
+            </p>
+              <div class="metric-row">
+                <div class="metric mango"><strong id="participantCount">0</strong><span>participantes</span></div>
+              <div class="metric violet"><strong id="questionCount">15 + 5</strong><span>reactivos + percepción</span></div>
+                <div class="metric mint"><strong>80%</strong><span>mínimo sugerido</span></div>
+              </div>
+          </div>
+          <form id="loginForm" class="login-card">
+            <label for="userNumberInput">Número de usuario</label>
+            <input id="userNumberInput" type="text" autocomplete="username" placeholder="Ejemplo: U001" required />
+            <label for="passwordInput">Contraseña</label>
+            <input id="passwordInput" type="password" autocomplete="current-password" placeholder="Contraseña asignada" required />
+            <label for="participantSearch">Lista oficial de participantes</label>
+            <input id="participantSearch" type="search" autocomplete="off" placeholder="Filtrar nombre, sede, carrera o usuario" />
+            <div id="participantPreview" class="participant-preview"></div>
+            <button class="primary" type="submit">Iniciar examen</button>
+          </form>
+          <div class="official-list">
+            <div class="admin-table-head">
+              <h2>Lista oficial</h2>
+              <span id="officialListCount">0 participantes</span>
+            </div>
+            <div id="officialList" class="official-list-grid"></div>
+          </div>
+        </section>
+
+        <section id="examView" class="view hidden">
+          <div class="exam-layout">
+            <aside class="sidebar panel">
+              <div class="student-card">
+                <span class="avatar" id="studentInitials">US</span>
+                <div>
+                  <strong id="studentName"></strong>
+                  <span id="studentMeta"></span>
+                </div>
+              </div>
+              <div class="folio-card">
+                <span>Folio</span>
+                <strong id="studentFolio"></strong>
+              </div>
+              <div class="progress-wrap">
+                <div class="progress-label"><span>Avance</span><strong id="progressText">0/15</strong></div>
+                <div class="progress-track"><div id="progressBar"></div></div>
+              </div>
+              <div id="questionTimer" class="timer-card"></div>
+              <div id="questionNav" class="question-nav"></div>
+              <button id="finishButton" class="success" type="button">Calificar examen</button>
+              <button id="logoutButton" class="ghost" type="button">Cambiar participante</button>
+            </aside>
+
+            <section class="question-panel panel">
+              <div class="question-top">
+                <span id="questionBadge" class="pill coral"></span>
+                <span id="questionTimerInline" class="timer-inline">Tiempo restante: 03:00</span>
+                <span id="saveStatus" class="save-status">Avance guardado</span>
+              </div>
+              <h2 id="questionPrompt"></h2>
+              <div id="questionImages" class="question-images"></div>
+              <div id="options" class="options"></div>
+              <div class="question-actions">
+                <button id="prevButton" class="secondary" type="button">Anterior</button>
+                <button id="nextButton" class="primary" type="button">Siguiente</button>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section id="resultView" class="view hidden panel result-panel">
+          <div class="result-hero">
+            <div>
+              <span id="resultStatus" class="pill"></span>
+              <h2 id="resultTitle"></h2>
+              <p id="resultMeta"></p>
+            </div>
+            <div class="score-orb"><strong id="scorePercent">0/15</strong><span id="scoreRaw">Calificación</span></div>
+          </div>
+          <div id="reviewTimer" class="review-timer"></div>
+          <div class="result-actions">
+            <button id="exportButton" class="secondary" type="button">Exportar resultados CSV</button>
+            <button id="practiceButton" class="primary" type="button">Continuar a percepción del curso</button>
+            <button id="backToLoginButton" class="ghost" type="button">Salir</button>
+          </div>
+          <div id="reviewList" class="review-list"></div>
+        </section>
+
+        <section id="finalView" class="view hidden panel result-panel">
+          <div class="result-hero">
+            <div>
+              <span class="pill cyan">Evaluación concluida</span>
+              <h2>Gracias por tu participación</h2>
+              <p id="finalMeta"></p>
+            </div>
+            <div class="score-orb"><strong>DGAS</strong><span>UNAM</span></div>
+          </div>
+          <div class="review-timer">
+            Tu participación ayuda a mejorar la enseñanza clínica. Que cada imagen, cada hallazgo y cada pregunta se conviertan en una mejor atención para las personas.
+          </div>
+          <button id="finalExitButton" class="primary" type="button">Salir</button>
+        </section>
+      </main>
+    </div>
+
+    <script src="app-data.js?v=auditorio"></script>
+    <script src="app.js?v=auditorio"></script>
+  </body>
+</html>
