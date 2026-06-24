@@ -57,6 +57,7 @@ const surveyQuestions = [
 let state = loadState();
 let currentParticipant = null;
 let currentPassword = "";
+let currentEmail = "";
 let currentIndex = 0;
 let currentMode = "exam";
 let timerHandle = null;
@@ -126,6 +127,7 @@ function attemptFor(id) {
       submittedAt: null,
       surveySubmittedAt: null,
       score: null,
+      email: "",
       examQuestionIds: [],
     };
   }
@@ -212,8 +214,14 @@ async function bootLogin() {
 async function handleLogin() {
   const userNumber = $("userNumberInput").value.trim().toUpperCase();
   const password = $("passwordInput").value.trim();
+  const email = $("emailInput").value.trim().toLowerCase();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    updateParticipantPreview(null, "Agrega un correo electrónico válido para recibir tu resultado.");
+    return;
+  }
+  currentEmail = email;
   if (onlineMode) {
-    const result = await api("/api/login", { userNumber, password });
+    const result = await api("/api/login", { userNumber, password, email });
     if (!result?.participant) {
       updateParticipantPreview(null, "Usuario o contraseña incorrectos.");
       return;
@@ -250,7 +258,7 @@ async function startExam(personId) {
   currentIndex = 0;
   currentMode = "exam";
 
-  const remote = await api("/api/start", { participantId: personId, password: currentPassword });
+  const remote = await api("/api/start", { participantId: personId, password: currentPassword, email: currentEmail });
   if (remote?.attempts) state = { attempts: { ...state.attempts, ...remote.attempts } };
   saveLocalState();
 
@@ -415,7 +423,7 @@ function updateProgress() {
 }
 
 async function gradeOfficialAttempt() {
-  const remote = await api("/api/submit", { participantId: currentParticipant.id, password: currentPassword });
+  const remote = await api("/api/submit", { participantId: currentParticipant.id, password: currentPassword, email: currentEmail });
   if (remote?.attempts) state = { attempts: { ...state.attempts, ...remote.attempts } };
   const attempt = attemptFor(currentParticipant.id);
   if (!attempt.score) {
@@ -440,7 +448,8 @@ function renderResult() {
   $("resultMeta").textContent = `${currentParticipant.folio} · Calificación: ${score.correct}/${score.total}`;
   $("scorePercent").textContent = `${score.correct}/${score.total}`;
   $("scoreRaw").textContent = "Calificación";
-  $("reviewTimer").textContent = "La evaluación fue registrada. No podrás repetir el examen. Revisa tu retroalimentación y después responde la percepción del curso.";
+  const emailStatus = attempt.emailStatus === "sent" ? `Resultado enviado a ${attempt.email || currentEmail}.` : `Resultado preparado para ${attempt.email || currentEmail}.`;
+  $("reviewTimer").textContent = `La evaluación fue registrada. No podrás repetir el examen. ${emailStatus} Revisa tu retroalimentación y después responde la percepción del curso.`;
 
   $("reviewList").innerHTML = questions
     .map((question, index) => {
@@ -469,7 +478,7 @@ async function finishSurvey() {
   const attempt = attemptFor(currentParticipant.id);
   attempt.surveySubmittedAt = new Date().toISOString();
   saveLocalState();
-  $("finalMeta").textContent = `${currentParticipant.name} · ${currentParticipant.folio}. Tus respuestas fueron registradas.`;
+  $("finalMeta").textContent = `${currentParticipant.name} · ${currentParticipant.folio}. Tus respuestas fueron registradas y tu resultado quedó asociado a ${currentEmail}.`;
   showView("final");
 }
 

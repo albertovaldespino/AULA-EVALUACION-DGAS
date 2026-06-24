@@ -2,6 +2,8 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 const os = require("os");
+const net = require("net");
+const tls = require("tls");
 
 const root = __dirname;
 const port = Number(process.env.PORT || 8765);
@@ -119,6 +121,9 @@ function attemptFor(participantId) {
       startedAt: new Date().toISOString(),
       submittedAt: null,
       score: null,
+      email: "",
+      emailStatus: "",
+      emailOutboxPath: "",
       practice: {},
     };
   }
@@ -144,6 +149,9 @@ function adminState() {
       answers: attempt.answers || {},
       survey: attempt.survey || {},
       score: attempt.score || null,
+      email: attempt.email || "",
+      emailStatus: attempt.emailStatus || "",
+      emailSentAt: attempt.emailSentAt || null,
       answered,
       surveyAnswered,
       examQuestionIds: attempt.examQuestionIds || [],
@@ -206,6 +214,208 @@ function gradeAttempt(attempt) {
   };
 }
 
+function normalizeEmail(email) {
+  const value = String(email || "").trim().toLowerCase();
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? value : "";
+}
+
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
+}
+
+function assetDataUri(filename, mimeType) {
+  try {
+    return `data:${mimeType};base64,${fs.readFileSync(path.join(root, "assets", filename)).toString("base64")}`;
+  } catch {
+    return "";
+  }
+}
+
+function selectedQuestionsForAttempt(attempt) {
+  const ids = attempt.examQuestionIds || selectQuestionIds(attempt.participantId);
+  return ids.map((id) => data.questions.find((question) => Number(question.id) === Number(id))).filter(Boolean);
+}
+
+function optionText(question, key) {
+  return question.options.find((option) => option.key === key)?.text || "";
+}
+
+function buildResultEmailHtml(person, attempt) {
+  const score = attempt.score || gradeAttempt(attempt);
+  const unamLogo = assetDataUri("unam-escudo-azul.webp", "image/webp");
+  const saludLogo = assetDataUri("logo-salud-unam.png", "image/png");
+  const rows = selectedQuestionsForAttempt(attempt)
+    .map((question, index) => {
+      const picked = attempt.answers?.[question.id] || "";
+      const timedOut = picked === "__TIMEOUT__";
+      const ok = picked === question.correct;
+      const chosen = timedOut ? "Sin respuesta por tiempo agotado" : optionText(question, picked) || "Sin respuesta";
+      const correct = optionText(question, question.correct);
+      return `
+        <tr>
+          <td style="padding:14px;border-bottom:1px solid #e8eef8;vertical-align:top;width:92px;">
+            <strong style="color:${ok ? "#28a76f" : "#e85d75"};">Reactivo ${index + 1}</strong><br />
+            <span style="font-size:12px;color:#63708a;">${ok ? "Correcto" : "Reforzar"}</span>
+          </td>
+          <td style="padding:14px;border-bottom:1px solid #e8eef8;vertical-align:top;">
+            <div style="font-weight:700;color:#14213d;margin-bottom:8px;">${escapeHtml(question.prompt)}</div>
+            <div style="font-size:14px;color:#4d5e78;margin-bottom:4px;"><strong>Tu respuesta:</strong> ${timedOut ? "" : `${escapeHtml(picked)}) `}${escapeHtml(chosen)}</div>
+            <div style="font-size:14px;color:#4d5e78;margin-bottom:4px;"><strong>Respuesta correcta:</strong> ${escapeHtml(question.correct)}) ${escapeHtml(correct)}</div>
+            <div style="font-size:14px;color:#4d5e78;"><strong>Retroalimentación:</strong> ${escapeHtml(question.feedback || "Revisa el material del curso para reforzar este tema.")}</div>
+          </td>
+        </tr>
+      `;
+    })
+    .join("");
+
+  return `<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Resultado de evaluación</title>
+  </head>
+  <body style="margin:0;background:#edf8fb;font-family:Arial,Helvetica,sans-serif;color:#14213d;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:linear-gradient(135deg,#d8f4ef,#eaf4ff 48%,#ffe3f1);padding:28px 12px;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="760" cellspacing="0" cellpadding="0" style="max-width:760px;width:100%;background:#ffffff;border-radius:20px;overflow:hidden;box-shadow:0 22px 60px rgba(31,52,92,.16);">
+            <tr>
+              <td style="padding:24px 30px;background:#ffffff;">
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td style="width:86px;">${unamLogo ? `<img src="${unamLogo}" alt="Escudo UNAM" style="width:70px;height:auto;display:block;" />` : ""}</td>
+                    <td>
+                      <div style="font-size:13px;font-weight:700;color:#61708c;">${escapeHtml(data.organization || "Dirección General de Atención a la Salud")}</div>
+                      <div style="font-size:28px;line-height:1.05;font-weight:900;color:#263b93;">${escapeHtml(data.platformName || "AulaPulso Evalua")}</div>
+                      <div style="font-size:14px;font-weight:700;color:#61708c;">${escapeHtml(data.course || "Curso Introductorio de Ultrasonido")}</div>
+                    </td>
+                    <td align="right" style="width:130px;">${saludLogo ? `<img src="${saludLogo}" alt="Salud UNAM" style="width:108px;height:auto;display:block;" />` : ""}</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:30px;background:linear-gradient(135deg,#263b93,#6651f0);color:#ffffff;">
+                <div style="font-size:13px;text-transform:uppercase;letter-spacing:.08em;font-weight:800;opacity:.9;">Resultado registrado</div>
+                <h1 style="margin:8px 0 6px;font-size:34px;line-height:1.05;">${escapeHtml(person.name)}</h1>
+                <div style="font-size:15px;opacity:.92;">${escapeHtml(person.folio)} · ${escapeHtml(person.site)} · ${escapeHtml(person.career)}</div>
+                <div style="margin-top:22px;display:inline-block;background:#ffffff;color:#263b93;border-radius:18px;padding:18px 24px;font-size:24px;font-weight:900;">
+                  Calificación: ${score.correct}/${score.total}
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:26px 30px;">
+                <p style="margin:0 0 18px;font-size:16px;line-height:1.55;color:#4d5e78;">
+                  Gracias por completar la evaluación. Abajo encontrarás tus reactivos correctos e incorrectos con retroalimentación para reforzar los puntos clave del tema.
+                </p>
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #e8eef8;border-radius:16px;overflow:hidden;">
+                  ${rows}
+                </table>
+                <p style="margin:24px 0 0;font-size:16px;line-height:1.55;color:#263b93;font-weight:800;">
+                  Tu participación ayuda a mejorar la enseñanza clínica y la atención a las personas.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>`;
+}
+
+function smtpRead(socket) {
+  return new Promise((resolve, reject) => {
+    let buffer = "";
+    const onData = (chunk) => {
+      buffer += chunk.toString("utf8");
+      const lines = buffer.split(/\r?\n/).filter(Boolean);
+      if (lines.length && /^\d{3}\s/.test(lines[lines.length - 1])) {
+        socket.off("data", onData);
+        socket.off("error", onError);
+        resolve(buffer);
+      }
+    };
+    const onError = (error) => {
+      socket.off("data", onData);
+      reject(error);
+    };
+    socket.on("data", onData);
+    socket.on("error", onError);
+  });
+}
+
+async function smtpCommand(socket, command, expected = /^2|^3/) {
+  if (command) socket.write(`${command}\r\n`);
+  const response = await smtpRead(socket);
+  if (!expected.test(response)) throw new Error(response.trim());
+  return response;
+}
+
+async function sendSmtpMail({ to, subject, html }) {
+  const host = process.env.SMTP_HOST;
+  if (!host) return false;
+  const portNumber = Number(process.env.SMTP_PORT || 465);
+  const secure = String(process.env.SMTP_SECURE || "true").toLowerCase() !== "false";
+  const from = process.env.SMTP_FROM || process.env.SMTP_USER || "no-reply@localhost";
+  const socket = secure
+    ? tls.connect({ host, port: portNumber, servername: host })
+    : net.connect({ host, port: portNumber });
+
+  await smtpCommand(socket, "", /^2/);
+  await smtpCommand(socket, `EHLO ${os.hostname() || "localhost"}`, /^2/);
+  if (process.env.SMTP_USER && process.env.SMTP_PASS) {
+    await smtpCommand(socket, "AUTH LOGIN", /^3/);
+    await smtpCommand(socket, Buffer.from(process.env.SMTP_USER).toString("base64"), /^3/);
+    await smtpCommand(socket, Buffer.from(process.env.SMTP_PASS).toString("base64"), /^2/);
+  }
+  await smtpCommand(socket, `MAIL FROM:<${from.replace(/^.*<|>.*$/g, "")}>`, /^2/);
+  await smtpCommand(socket, `RCPT TO:<${to}>`, /^2|^3/);
+  await smtpCommand(socket, "DATA", /^3/);
+  const message = [
+    `From: ${from}`,
+    `To: ${to}`,
+    `Subject: =?UTF-8?B?${Buffer.from(subject).toString("base64")}?=`,
+    "MIME-Version: 1.0",
+    "Content-Type: text/html; charset=UTF-8",
+    "",
+    html.replace(/\r?\n/g, "\r\n"),
+    ".",
+  ].join("\r\n");
+  await smtpCommand(socket, message, /^2/);
+  socket.write("QUIT\r\n");
+  socket.end();
+  return true;
+}
+
+async function sendResultEmail(person, attempt) {
+  if (!attempt.email) return;
+  const html = buildResultEmailHtml(person, attempt);
+  const outbox = path.join(root, "email-outbox");
+  fs.mkdirSync(outbox, { recursive: true });
+  const filename = `${person.userNumber || person.folio}-${Date.now()}.html`.replace(/[^A-Za-z0-9_.-]/g, "-");
+  const target = path.join(outbox, filename);
+  fs.writeFileSync(target, html);
+  attempt.emailOutboxPath = target;
+  attempt.emailStatus = "outbox";
+  attempt.emailPreparedAt = new Date().toISOString();
+  if (!process.env.SMTP_HOST) return;
+
+  try {
+    await sendSmtpMail({
+      to: attempt.email,
+      subject: `Resultado de evaluación - ${data.course || "AulaPulso Evalua"}`,
+      html,
+    });
+    attempt.emailStatus = "sent";
+    attempt.emailSentAt = new Date().toISOString();
+  } catch (error) {
+    attempt.emailStatus = `error: ${error.message}`;
+    console.error("No se pudo enviar el correo; se conservo copia HTML.", error);
+  }
+}
+
 function broadcast() {
   const payload = `data: ${JSON.stringify(adminState())}\n\n`;
   for (const res of clients) res.write(payload);
@@ -266,7 +476,9 @@ async function handleApi(req, res) {
       res.writeHead(401);
       return res.end("Participante no autorizado");
     }
-    attemptFor(person.id);
+    const attempt = attemptFor(person.id);
+    const email = normalizeEmail(body.email);
+    if (email) attempt.email = email;
     saveState();
     broadcast();
     return sendJson(res, singleAttemptState(person.id));
@@ -301,9 +513,14 @@ async function handleApi(req, res) {
       return res.end("Participante no autorizado");
     }
     const attempt = attemptFor(person.id);
+    const email = normalizeEmail(body.email);
+    if (email) attempt.email = email;
     if (!attempt.submittedAt) {
       attempt.submittedAt = new Date().toISOString();
       attempt.score = gradeAttempt(attempt);
+      await sendResultEmail(person, attempt);
+    } else if (attempt.email && !attempt.emailPreparedAt) {
+      await sendResultEmail(person, attempt);
     }
     saveState();
     broadcast();

@@ -37,12 +37,32 @@ Comando de arranque:
 ADMIN_PASSWORD="cambia-esta-clave" PORT=8765 node server.js
 ```
 
+## Envio de resultados por correo
+
+El participante captura su correo antes de iniciar. Al terminar el examen, la app genera un correo HTML con escudos, calificacion, reactivos correctos e incorrectos y retroalimentacion.
+
+Para que el correo salga realmente al destinatario, configura SMTP al iniciar el servidor:
+
+```bash
+ADMIN_PASSWORD="cambia-esta-clave" \
+SMTP_HOST="smtp.tu-proveedor.com" \
+SMTP_PORT=465 \
+SMTP_SECURE=true \
+SMTP_USER="usuario@tu-dominio.com" \
+SMTP_PASS="tu-password-o-app-password" \
+SMTP_FROM="AulaPulso Evalua <usuario@tu-dominio.com>" \
+node server.js
+```
+
+Si no configuras SMTP, no se pierde el resultado: se guarda una copia bonita en `email-outbox/` para reenviarla o revisarla.
+
 ## Seguridad minima
 
 - Cambia siempre `ADMIN_PASSWORD`.
 - Comparte el enlace de administrador solo con el responsable del curso.
 - Exporta CSV al finalizar.
 - Conserva `content.json` y `server-state.json`; ahi se guardan curso, participantes, reactivos y respuestas.
+- Conserva tambien `email-outbox/` si no configuraste SMTP y quieres revisar los correos generados.
 
 ## Credenciales
 

@@ -109,7 +109,7 @@ function renderMonitor() {
       return `
         <tr>
           <td><strong>${row.userNumber || row.folio}</strong><span>${row.folio}</span></td>
-          <td><strong>${row.name}</strong><span>${row.site} · ${row.career}</span></td>
+          <td><strong>${row.name}</strong><span>${row.site} · ${row.career}</span><span>${row.email || "Sin correo"}</span></td>
           <td><span class="status ${status === "Finalizado" ? "done" : status === "Activo" ? "live" : ""}">${status}</span></td>
           <td>
             <div class="mini-progress"><div style="width:${row.progress}%"></div></div>
@@ -117,7 +117,7 @@ function renderMonitor() {
           </td>
           <td>${score}</td>
           <td>${lastAnswer(row)}</td>
-          <td>${Object.entries(row.survey || {}).map(([id, value]) => `${id}:${value}`).join(" · ") || "-"}</td>
+          <td>${Object.entries(row.survey || {}).map(([id, value]) => `${id}:${value}`).join(" · ") || row.emailStatus || "-"}</td>
         </tr>
       `;
     })
@@ -215,6 +215,8 @@ function exportCsv() {
       "sede",
       "carrera",
       "estado",
+      "correo",
+      "estado_correo",
       "reactivos_respondidos",
       "encuesta_respondida",
       "aciertos",
@@ -232,6 +234,8 @@ function exportCsv() {
       row.site,
       row.career,
       statusFor(row),
+      row.email || "",
+      row.emailStatus || "",
       row.answered,
       row.surveyAnswered,
       row.score?.correct ?? "",

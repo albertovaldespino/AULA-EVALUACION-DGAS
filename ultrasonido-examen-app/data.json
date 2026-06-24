@@ -1,10 +1,10 @@
 {
   "course": "Curso Introductorio de Ultrasonido",
-  "examTitle": "Examen Final de Ultrasonografia para Medicos Pasantes",
+  "examTitle": "Examen Final de Ultrasonografía",
   "questions": [
     {
       "id": 1,
-      "prompt": "¿Cuál definición describe mejor al ultrasonido diagnóstico?",
+      "prompt": "¿Cuál de las siguientes opciones describe mejor el ultrasonido diagnóstico?",
       "options": [
         {
           "key": "A",
@@ -33,7 +33,7 @@
       "options": [
         {
           "key": "A",
-          "text": "Número de ciclos por segundo de la onda sonora."
+          "text": "Pérdida de energía por absorción tisular."
         },
         {
           "key": "B",
@@ -41,24 +41,24 @@
         },
         {
           "key": "C",
-          "text": "Pérdida de energía por absorción tisular."
+          "text": "Número de ciclos por segundo de la onda sonora."
         },
         {
           "key": "D",
           "text": "Resistencia del tejido al paso del ultrasonido."
         }
       ],
-      "correct": "A",
+      "correct": "C",
       "feedback": "La frecuencia se mide en hertz; en diagnóstico suele expresarse en MHz.",
       "images": []
     },
     {
       "id": 3,
-      "prompt": "Observe la imagen. ¿Qué elemento marcado por la barra horizontal representa la distancia de un ciclo completo?",
+      "prompt": "Observe la imagen. ¿Qué elemento marcado por la barra horizontal representa la distancia de un ciclo completo? ¿Qué parámetro representa la distancia correspondiente a un ciclo completo de la onda?",
       "options": [
         {
           "key": "A",
-          "text": "Longitud de onda."
+          "text": "Atenuación."
         },
         {
           "key": "B",
@@ -70,10 +70,10 @@
         },
         {
           "key": "D",
-          "text": "Atenuación."
+          "text": "Longitud de onda."
         }
       ],
-      "correct": "A",
+      "correct": "D",
       "feedback": "La longitud de onda es la distancia necesaria para completar un ciclo de la onda.",
       "images": [
         "assets/reactivo-03-1.png"
@@ -81,7 +81,7 @@
     },
     {
       "id": 4,
-      "prompt": "¿Qué relación práctica existe entre frecuencia y resolución/profundidad?",
+      "prompt": "¿ Cuál es la relación práctica entre frecuencia y resolución/profundidad?",
       "options": [
         {
           "key": "A",
@@ -106,15 +106,15 @@
     },
     {
       "id": 5,
-      "prompt": "¿Cuál velocidad se utiliza habitualmente como promedio del sonido en tejidos blandos?",
+      "prompt": "¿ Qué velocidad se utiliza habitualmente como promedio del sonido en tejidos blandos?",
       "options": [
         {
           "key": "A",
-          "text": "1540 m/s."
+          "text": "20,000 m/s."
         },
         {
           "key": "B",
-          "text": "332 m/s."
+          "text": "1540 m/s."
         },
         {
           "key": "C",
@@ -122,10 +122,10 @@
         },
         {
           "key": "D",
-          "text": "20,000 m/s."
+          "text": "332 m/s."
         }
       ],
-      "correct": "A",
+      "correct": "B",
       "feedback": "Los ecógrafos asumen aproximadamente 1540 m/s para calcular profundidad en tejidos blandos.",
       "images": []
     },
@@ -160,7 +160,7 @@
       "options": [
         {
           "key": "A",
-          "text": "Se refleja gran parte del haz y se limita la visualización profunda."
+          "text": "Aumenta siempre la profundidad útil."
         },
         {
           "key": "B",
@@ -168,14 +168,14 @@
         },
         {
           "key": "C",
-          "text": "Aumenta siempre la profundidad útil."
+          "text": "Se refleja gran parte del haz y se limita la visualización profunda."
         },
         {
           "key": "D",
           "text": "Se convierte en radiación ionizante."
         }
       ],
-      "correct": "A",
+      "correct": "C",
       "feedback": "El aire dificulta la ecografía porque produce gran reflexión y dispersión.",
       "images": []
     },
@@ -185,7 +185,7 @@
       "options": [
         {
           "key": "A",
-          "text": "Transductor convexo de baja frecuencia."
+          "text": "Cualquier sonda produce la misma imagen."
         },
         {
           "key": "B",
@@ -197,10 +197,10 @@
         },
         {
           "key": "D",
-          "text": "Cualquier sonda produce la misma imagen."
+          "text": "Transductor convexo de baja frecuencia."
         }
       ],
-      "correct": "A",
+      "correct": "D",
       "feedback": "Para abdomen se busca mayor penetración, por lo que se prefiere un transductor convexo.",
       "images": [
         "assets/reactivo-08-1.png"
@@ -233,7 +233,7 @@
     },
     {
       "id": 10,
-      "prompt": "¿Qué ajuste debe modificarse si las estructuras profundas se ven muy oscuras respecto de las superficiales?",
+      "prompt": "¿Qué ajuste debe modificarse si las estructuras profundas se ven muy oscuras respecto de las superficiales? Si las estructuras profundas se observan más obscuras que las superficiales, ¿qué ajuste debe modificarse?",
       "options": [
         {
           "key": "A",
@@ -255,7 +255,7 @@
       "correct": "A",
       "feedback": "La TGC compensa la atenuación progresiva del haz con la profundidad.",
       "images": [
-        "assets/reactivo-10-1.png"
+        "assets/reactivo-10-1.jpg"
       ]
     },
     {
@@ -264,7 +264,7 @@
       "options": [
         {
           "key": "A",
-          "text": "Modo B."
+          "text": "Doppler pulsado."
         },
         {
           "key": "B",
@@ -272,14 +272,14 @@
         },
         {
           "key": "C",
-          "text": "Doppler pulsado."
+          "text": "Modo B."
         },
         {
           "key": "D",
           "text": "Doppler continuo."
         }
       ],
-      "correct": "A",
+      "correct": "C",
       "feedback": "El modo B es el modo básico para formar la imagen anatómica en tiempo real.",
       "images": []
     },
@@ -289,11 +289,11 @@
       "options": [
         {
           "key": "A",
-          "text": "Registro del movimiento de una línea de exploración a través del tiempo."
+          "text": "Reconstrucción tridimensional obligatoria."
         },
         {
           "key": "B",
-          "text": "Reconstrucción tridimensional obligatoria."
+          "text": "Registro del movimiento de una línea de exploración a través del tiempo."
         },
         {
           "key": "C",
@@ -304,7 +304,7 @@
           "text": "Ecografía sin imagen visible."
         }
       ],
-      "correct": "A",
+      "correct": "B",
       "feedback": "El modo M es útil para estructuras móviles, especialmente en ecocardiografía.",
       "images": []
     },
@@ -339,7 +339,7 @@
       "options": [
         {
           "key": "A",
-          "text": "Cambiar el ángulo/posición de la sonda y usar ventanas acústicas."
+          "text": "Apagar la profundidad."
         },
         {
           "key": "B",
@@ -347,15 +347,15 @@
         },
         {
           "key": "C",
-          "text": "Apagar la profundidad."
+          "text": "Cambiar el ángulo/posición de la sonda y usar ventanas acústicas."
         },
         {
           "key": "D",
           "text": "Retirar siempre el gel."
         }
       ],
-      "correct": "A",
-      "feedback": "Los principiantes deben buscar ventanas y ajustar posición; no todo se arregla a golpe de botones.",
+      "correct": "C",
+      "feedback": "Los principiantes deben buscar ventanas y ajustar posición; no todo se arregla a golpe de botones. La modificación de la ventana acústica y la posición de la sonda puede mejorar significativamente la imagen.",
       "images": []
     },
     {
@@ -364,7 +364,7 @@
       "options": [
         {
           "key": "A",
-          "text": "Sombra acústica posterior."
+          "text": "Línea B pulmonar."
         },
         {
           "key": "B",
@@ -376,13 +376,13 @@
         },
         {
           "key": "D",
-          "text": "Línea B pulmonar."
+          "text": "Sombra acústica posterior."
         }
       ],
-      "correct": "A",
+      "correct": "D",
       "feedback": "La sombra aparece cuando una estructura atenúa o refleja fuertemente el haz, como cálculo o hueso.",
       "images": [
-        "assets/reactivo-15-1.png"
+        "assets/reactivo-15-1.jpg"
       ]
     },
     {
@@ -391,7 +391,7 @@
       "options": [
         {
           "key": "A",
-          "text": "Refuerzo acústico posterior."
+          "text": "Anisotropía."
         },
         {
           "key": "B",
@@ -399,17 +399,17 @@
         },
         {
           "key": "C",
-          "text": "Anisotropía."
+          "text": "Refuerzo acústico posterior."
         },
         {
           "key": "D",
           "text": "Reverberación por metal."
         }
       ],
-      "correct": "A",
+      "correct": "C",
       "feedback": "El líquido transmite bien el ultrasonido; por eso lo profundo puede verse más brillante.",
       "images": [
-        "assets/reactivo-16-1.png"
+        "assets/reactivo-16-1.jpg"
       ]
     },
     {
@@ -443,7 +443,7 @@
       "options": [
         {
           "key": "A",
-          "text": "Más brillante que los tejidos vecinos."
+          "text": "Solo durante apnea."
         },
         {
           "key": "B",
@@ -455,10 +455,10 @@
         },
         {
           "key": "D",
-          "text": "Solo durante apnea."
+          "text": "Más brillante que los tejidos vecinos."
         }
       ],
-      "correct": "A",
+      "correct": "D",
       "feedback": "Hiperecogénico significa mayor retorno de ecos y mayor brillo.",
       "images": []
     },
@@ -468,11 +468,11 @@
       "options": [
         {
           "key": "A",
-          "text": "Reverberación."
+          "text": "Refuerzo posterior."
         },
         {
           "key": "B",
-          "text": "Refuerzo posterior."
+          "text": "Reverberación."
         },
         {
           "key": "C",
@@ -483,7 +483,7 @@
           "text": "Atenuación homogénea normal."
         }
       ],
-      "correct": "A",
+      "correct": "B",
       "feedback": "La reverberación se produce por reflexiones múltiples entre interfaces fuertes.",
       "images": []
     },
@@ -509,12 +509,12 @@
         }
       ],
       "correct": "A",
-      "feedback": "Un cambio leve de ángulo puede simular patología; el operador tiene que domar la sonda, no pelearse con ella.",
+      "feedback": "Un cambio leve de ángulo puede simular patología; el operador tiene que domar la sonda, no pelearse con ella. Un ligero cambio de ángulo puede modificar la ecogenicidad y simular patología.",
       "images": []
     },
     {
       "id": 21,
-      "prompt": "En el protocolo FAST, la ventana hepatorrenal busca principalmente:",
+      "prompt": "En el protocolo FAST, la ventana hepatorrenal se utiliza principalmente para identificar:",
       "options": [
         {
           "key": "A",
@@ -543,7 +543,7 @@
       "options": [
         {
           "key": "A",
-          "text": "Líquido libre intraperitoneal."
+          "text": "Hidronefrosis leve."
         },
         {
           "key": "B",
@@ -551,17 +551,17 @@
         },
         {
           "key": "C",
-          "text": "Hidronefrosis leve."
+          "text": "Líquido libre intraperitoneal."
         },
         {
           "key": "D",
           "text": "Aire subcutáneo."
         }
       ],
-      "correct": "A",
+      "correct": "C",
       "feedback": "En la ventana hepatorrenal, una colección anecoica en el espacio de Morrison es compatible con líquido libre.",
       "images": [
-        "assets/reactivo-22-1.png"
+        "assets/reactivo-22-1.jpg"
       ]
     },
     {
@@ -570,7 +570,7 @@
       "options": [
         {
           "key": "A",
-          "text": "Perihepática, periesplénica, suprapúbica y subxifoidea/pericárdica."
+          "text": "Solo vesícula y páncreas."
         },
         {
           "key": "B",
@@ -582,10 +582,10 @@
         },
         {
           "key": "D",
-          "text": "Solo vesícula y páncreas."
+          "text": "Perihepática, periesplénica, suprapúbica y subxifoidea/pericárdica."
         }
       ],
-      "correct": "A",
+      "correct": "D",
       "feedback": "FAST es un examen focalizado para líquido libre y pericardio en el contexto adecuado.",
       "images": []
     },
@@ -616,11 +616,11 @@
     },
     {
       "id": 25,
-      "prompt": "Observe la imagen. El diagnóstico ecográfico más probable es:",
+      "prompt": "Observe la imagen. ¿Cuál es el diagnóstico ecográfico más probable?",
       "options": [
         {
           "key": "A",
-          "text": "Colelitiasis."
+          "text": "Aneurisma de aorta."
         },
         {
           "key": "B",
@@ -632,13 +632,13 @@
         },
         {
           "key": "D",
-          "text": "Aneurisma de aorta."
+          "text": "Colelitiasis."
         }
       ],
-      "correct": "A",
+      "correct": "D",
       "feedback": "La imagen muestra estructuras hiperecogénicas dependientes dentro de vesícula con sombra posterior.",
       "images": [
-        "assets/reactivo-25-1.png"
+        "assets/reactivo-25-1.jpg"
       ]
     },
     {
@@ -647,11 +647,11 @@
       "options": [
         {
           "key": "A",
-          "text": "Murphy ecográfico positivo."
+          "text": "Ausencia de gel"
         },
         {
           "key": "B",
-          "text": "Ausencia de gel."
+          "text": "Murphy ecográfico positivo."
         },
         {
           "key": "C",
@@ -672,7 +672,7 @@
       "options": [
         {
           "key": "A",
-          "text": "Dilatación anecoica del sistema pielocalicial."
+          "text": "Ausencia de vejiga en todos los casos."
         },
         {
           "key": "B",
@@ -684,10 +684,10 @@
         },
         {
           "key": "D",
-          "text": "Ausencia de vejiga en todos los casos."
+          "text": "Dilatación anecoica del sistema pielocalicial."
         }
       ],
-      "correct": "A",
+      "correct": "C",
       "feedback": "El sistema colector dilatado se ve negro/anecoico dentro del seno renal.",
       "images": []
     },
@@ -715,7 +715,7 @@
       "correct": "A",
       "feedback": "Las áreas anecoicas centrales y caliciales sugieren dilatación del sistema colector.",
       "images": [
-        "assets/reactivo-28-1.png"
+        "assets/reactivo-28-1.jpg"
       ]
     },
     {
@@ -724,11 +724,11 @@
       "options": [
         {
           "key": "A",
-          "text": "Largo, ancho y alto."
+          "text": "Solo grosor de la pared abdominal."
         },
         {
           "key": "B",
-          "text": "Solo grosor de la pared abdominal."
+          "text": "Largo, ancho y alto."
         },
         {
           "key": "C",
@@ -739,17 +739,17 @@
           "text": "Temperatura y saturación."
         }
       ],
-      "correct": "A",
+      "correct": "B",
       "feedback": "El volumen vesical se estima con dimensiones ortogonales y una constante según fórmula del equipo.",
       "images": []
     },
     {
       "id": 30,
-      "prompt": "En aorta abdominal, el objetivo inicial en urgencias suele ser:",
+      "prompt": "En aorta abdominal, en el contexto de urgencias, el objetivo principal de evaluar la aorta abdominal es:",
       "options": [
         {
           "key": "A",
-          "text": "Identificar o descartar aneurisma de aorta abdominal infrarrenal."
+          "text": "Cuantificar grasa subcutánea."
         },
         {
           "key": "B",
@@ -761,10 +761,10 @@
         },
         {
           "key": "D",
-          "text": "Cuantificar grasa subcutánea."
+          "text": "Identificar o descartar aneurisma de aorta abdominal infrarrenal."
         }
       ],
-      "correct": "A",
+      "correct": "D",
       "feedback": "La ecografía focalizada puede identificar dilatación aneurismática de la aorta abdominal.",
       "images": []
     },
@@ -774,7 +774,7 @@
       "options": [
         {
           "key": "A",
-          "text": "De pared externa a pared externa, idealmente en cortes transversales y longitudinales."
+          "text": "En cualquier vaso venoso cercano."
         },
         {
           "key": "B",
@@ -782,14 +782,14 @@
         },
         {
           "key": "C",
-          "text": "En cualquier vaso venoso cercano."
+          "text": "De pared externa a pared externa, idealmente en cortes transversales y longitudinales."
         },
         {
           "key": "D",
           "text": "Sobre el borde de la imagen sin identificar estructuras."
         }
       ],
-      "correct": "A",
+      "correct": "C",
       "feedback": "La medición estándar del diámetro aórtico debe incluir toda la pared vascular.",
       "images": []
     },
@@ -799,7 +799,7 @@
       "options": [
         {
           "key": "A",
-          "text": "Estado de volumen/presión venosa en contexto clínico."
+          "text": "Rotura de tendón de Aquiles"
         },
         {
           "key": "B",
@@ -807,14 +807,14 @@
         },
         {
           "key": "C",
-          "text": "Rotura de tendón de Aquiles."
+          "text": "Estado de volumen/presión venosa en contexto clínico."
         },
         {
           "key": "D",
           "text": "Edad gestacional."
         }
       ],
-      "correct": "A",
+      "correct": "C",
       "feedback": "La VCI puede orientar, pero siempre debe interpretarse con el cuadro clínico.",
       "images": []
     },
@@ -842,7 +842,7 @@
       "correct": "A",
       "feedback": "La línea representa el diámetro de la VCI en eje largo, útil como dato hemodinámico complementario.",
       "images": [
-        "assets/reactivo-33-1.png"
+        "assets/reactivo-33-1.jpg"
       ]
     },
     {
@@ -851,11 +851,11 @@
       "options": [
         {
           "key": "A",
-          "text": "Líneas A horizontales con deslizamiento pleural."
+          "text": "Líneas B numerosas en todos los campos."
         },
         {
           "key": "B",
-          "text": "Líneas B numerosas en todos los campos."
+          "text": "Líneas A horizontales con deslizamiento pleural."
         },
         {
           "key": "C",
@@ -866,7 +866,7 @@
           "text": "Hidronefrosis bilateral."
         }
       ],
-      "correct": "A",
+      "correct": "B",
       "feedback": "El patrón normal suele tener línea pleural deslizante y artefactos horizontales tipo líneas A.",
       "images": []
     },
@@ -928,11 +928,11 @@
       "options": [
         {
           "key": "A",
-          "text": "Mantener visualizada la punta de la aguja y usar técnica estéril."
+          "text": "Introducir la aguja sin identificar estructuras vecinas."
         },
         {
           "key": "B",
-          "text": "Introducir la aguja sin identificar estructuras vecinas."
+          "text": "Mantener visualizada la punta de la aguja y usar técnica estéril."
         },
         {
           "key": "C",
@@ -943,7 +943,7 @@
           "text": "Apagar la imagen antes de puncionar."
         }
       ],
-      "correct": "A",
+      "correct": "B",
       "feedback": "La seguridad depende de ver la aguja, identificar vasos/órganos y respetar técnica aséptica.",
       "images": []
     },
@@ -953,7 +953,7 @@
       "options": [
         {
           "key": "A",
-          "text": "Es dependiente del operador y de la ventana acústica."
+          "text": "No puede repetirse."
         },
         {
           "key": "B",
@@ -965,20 +965,20 @@
         },
         {
           "key": "D",
-          "text": "No puede repetirse."
+          "text": "Es dependiente del operador y de la ventana acústica."
         }
       ],
-      "correct": "A",
+      "correct": "D",
       "feedback": "La calidad depende de entrenamiento, técnica, paciente y ventana acústica.",
       "images": []
     },
     {
       "id": 39,
-      "prompt": "¿Qué principio de seguridad resume mejor el uso diagnóstico del ultrasonido?",
+      "prompt": "¿Qué principio de seguridad guía el uso diagnóstico del ultrasonido?",
       "options": [
         {
           "key": "A",
-          "text": "Usar la menor exposición razonable para obtener la información necesaria."
+          "text": "Usar Doppler en todo paciente sin indicación."
         },
         {
           "key": "B",
@@ -990,10 +990,10 @@
         },
         {
           "key": "D",
-          "text": "Usar Doppler en todo paciente sin indicación."
+          "text": "Usar la menor exposición razonable para obtener la información necesaria."
         }
       ],
-      "correct": "A",
+      "correct": "D",
       "feedback": "La seguridad se basa en optimizar imagen con exposición razonable, especialmente en exploraciones sensibles.",
       "images": []
     },
@@ -1003,7 +1003,7 @@
       "options": [
         {
           "key": "A",
-          "text": "Indicación, región explorada, hallazgos relevantes, interpretación y limitaciones."
+          "text": "Únicamente la hora de inicio."
         },
         {
           "key": "B",
@@ -1011,15 +1011,15 @@
         },
         {
           "key": "C",
-          "text": "Únicamente la hora de inicio."
+          "text": "Indicación, región explorada, hallazgos relevantes, interpretación y limitaciones."
         },
         {
           "key": "D",
           "text": "Nada si el estudio fue normal."
         }
       ],
-      "correct": "A",
-      "feedback": "Un reporte útil debe incluir la indicación, la región explorada, los hallazgos relevantes, la interpretación y cualquier limitación del estudio.",
+      "correct": "C",
+      "feedback": "Un reporte útil deja claro qué se buscó, qué se vio, qué se concluyó y qué limitó el estudio.",
       "images": []
     }
   ],
@@ -1052,8 +1052,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U001",
-      "password": "7401"
+      "userNumber": "U001"
     },
     {
       "id": "JAIMESCASTROBRENDAGUADALUPE",
@@ -1083,8 +1082,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U002",
-      "password": "7402"
+      "userNumber": "U002"
     },
     {
       "id": "MOLINAALFAROFATIMA",
@@ -1114,8 +1112,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U003",
-      "password": "7403"
+      "userNumber": "U003"
     },
     {
       "id": "SEGURAROMEROCRISTIANALEJANDRO",
@@ -1145,8 +1142,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U004",
-      "password": "7404"
+      "userNumber": "U004"
     },
     {
       "id": "TOTOHERNANDEZSANTIAGODEJESUS",
@@ -1176,8 +1172,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U005",
-      "password": "7405"
+      "userNumber": "U005"
     },
     {
       "id": "DELVALLEGUTIERREZVALESKA",
@@ -1207,8 +1202,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U006",
-      "password": "7406"
+      "userNumber": "U006"
     },
     {
       "id": "LEONROSASDAFNESOFIA",
@@ -1238,8 +1232,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U007",
-      "password": "7407"
+      "userNumber": "U007"
     },
     {
       "id": "MONDRAGONMONTOYANANCY",
@@ -1269,8 +1262,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U008",
-      "password": "7408"
+      "userNumber": "U008"
     },
     {
       "id": "MONTESDEOCACUADROSPAOLAALEJANDRA",
@@ -1300,8 +1292,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U009",
-      "password": "7409"
+      "userNumber": "U009"
     },
     {
       "id": "MURGUIAGARIBAYJESUSIVAN",
@@ -1331,8 +1322,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U010",
-      "password": "7410"
+      "userNumber": "U010"
     },
     {
       "id": "PORFIRIOMELOJASID",
@@ -1362,8 +1352,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U011",
-      "password": "7411"
+      "userNumber": "U011"
     },
     {
       "id": "SERRAROMANMEZLI",
@@ -1393,8 +1382,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U012",
-      "password": "7412"
+      "userNumber": "U012"
     },
     {
       "id": "GRANADOSACOSTAANDREA",
@@ -1424,8 +1412,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U013",
-      "password": "7413"
+      "userNumber": "U013"
     },
     {
       "id": "GARCIAVARGASDENNISE",
@@ -1455,8 +1442,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U014",
-      "password": "7414"
+      "userNumber": "U014"
     },
     {
       "id": "HERNANDEZGARCIAAARON",
@@ -1486,8 +1472,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U015",
-      "password": "7415"
+      "userNumber": "U015"
     },
     {
       "id": "NEGRETEBASTIDAVALERIA",
@@ -1502,8 +1487,7 @@
           "status": "registrado"
         }
       ],
-      "userNumber": "U016",
-      "password": "7416"
+      "userNumber": "U016"
     },
     {
       "id": "ARCOSORTEGATANIAOSIRIS",
@@ -1533,8 +1517,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U017",
-      "password": "7417"
+      "userNumber": "U017"
     },
     {
       "id": "BALSECASANTIAGOJEREMYDEJESUS",
@@ -1564,8 +1547,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U018",
-      "password": "7418"
+      "userNumber": "U018"
     },
     {
       "id": "CAMPOSCAMPAANGELZURIEL",
@@ -1595,8 +1577,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U019",
-      "password": "7419"
+      "userNumber": "U019"
     },
     {
       "id": "CHIFERNANDEZENRIQUE",
@@ -1626,8 +1607,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U020",
-      "password": "7420"
+      "userNumber": "U020"
     },
     {
       "id": "CORONAGONZALEZSAMANTHA",
@@ -1657,8 +1637,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U021",
-      "password": "7421"
+      "userNumber": "U021"
     },
     {
       "id": "GARCIAHERRERAPAULINA",
@@ -1688,8 +1667,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U022",
-      "password": "7422"
+      "userNumber": "U022"
     },
     {
       "id": "GARCIATREJOFRIDAGUADALUPE",
@@ -1719,8 +1697,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U023",
-      "password": "7423"
+      "userNumber": "U023"
     },
     {
       "id": "HERNANDEZALVAREZMARIANA",
@@ -1750,8 +1727,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U024",
-      "password": "7424"
+      "userNumber": "U024"
     },
     {
       "id": "LECHUGASANTOSDIEGO",
@@ -1781,8 +1757,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U025",
-      "password": "7425"
+      "userNumber": "U025"
     },
     {
       "id": "MEJIARAMIREZROXANA",
@@ -1812,8 +1787,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U026",
-      "password": "7426"
+      "userNumber": "U026"
     },
     {
       "id": "PINAMENDEZVICTORMANUEL",
@@ -1843,8 +1817,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U027",
-      "password": "7427"
+      "userNumber": "U027"
     },
     {
       "id": "REYESLOPEZJESUSEMMANUEL",
@@ -1874,8 +1847,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U028",
-      "password": "7428"
+      "userNumber": "U028"
     },
     {
       "id": "SALINASMURGUIAMARIAMIREYA",
@@ -1905,8 +1877,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U029",
-      "password": "7429"
+      "userNumber": "U029"
     },
     {
       "id": "TORRESCONDEALMAROSA",
@@ -1936,8 +1907,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U030",
-      "password": "7430"
+      "userNumber": "U030"
     },
     {
       "id": "ANGELINORODRIGUEZJANETH",
@@ -1967,8 +1937,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U031",
-      "password": "7431"
+      "userNumber": "U031"
     },
     {
       "id": "ARGUELLESNAJERADULCEMARIA",
@@ -1998,8 +1967,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U032",
-      "password": "7432"
+      "userNumber": "U032"
     },
     {
       "id": "CHAVEZMARTINEZJOCELYNITZEL",
@@ -2029,8 +1997,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U033",
-      "password": "7433"
+      "userNumber": "U033"
     },
     {
       "id": "CHAVEZMORENOCRISEL",
@@ -2060,8 +2027,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U034",
-      "password": "7434"
+      "userNumber": "U034"
     },
     {
       "id": "CORTESGARCIASANDRAPAOLA",
@@ -2091,8 +2057,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U035",
-      "password": "7435"
+      "userNumber": "U035"
     },
     {
       "id": "GAMEZMARTINEZDANIELA",
@@ -2122,8 +2087,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U036",
-      "password": "7436"
+      "userNumber": "U036"
     },
     {
       "id": "GUZMANCARRILLOMARIAFERNANDA",
@@ -2153,8 +2117,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U037",
-      "password": "7437"
+      "userNumber": "U037"
     },
     {
       "id": "JUAREZHERNANDEZPAMELAABIGAIL",
@@ -2184,8 +2147,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U038",
-      "password": "7438"
+      "userNumber": "U038"
     },
     {
       "id": "MENDEZFERNANDEZANDREAITZEL",
@@ -2215,8 +2177,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U039",
-      "password": "7439"
+      "userNumber": "U039"
     },
     {
       "id": "MIGUELCUAPIOJOSEMARTIN",
@@ -2246,8 +2207,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U040",
-      "password": "7440"
+      "userNumber": "U040"
     },
     {
       "id": "MANJARREZFLORESGEMMASARAI",
@@ -2277,8 +2237,7 @@
           "status": "sin registro"
         }
       ],
-      "userNumber": "U041",
-      "password": "7441"
+      "userNumber": "U041"
     }
   ],
   "platformName": "AulaPulso Evalua",
