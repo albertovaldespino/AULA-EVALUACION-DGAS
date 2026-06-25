@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Administrador | AulaPulso Evalua</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shell admin-shell">
+      <header class="topbar">
+        <div class="brand">
+          <img src="assets/unam-escudo-azul.webp" alt="Escudo UNAM" class="brand-mark unam" />
+          <div>
+            <p class="eyebrow" id="adminOrganization">Dirección General de Atención a la Salud</p>
+            <h1 id="adminPlatform">AulaPulso Evalua</h1>
+            <p class="subtitle" id="adminCourse">Plataforma de evaluación y mejora continua de cursos</p>
+          </div>
+        </div>
+        <img src="assets/logo-salud-unam.png" alt="Salud UNAM" class="brand-mark salud" />
+      </header>
+
+      <nav class="app-tabs">
+        <a class="tab" href="index.html">Participante</a>
+        <a class="tab active" href="admin.html">Administrador</a>
+      </nav>
+
+      <section id="adminLoginView" class="panel admin-login">
+        <h2>Acceso de administrador</h2>
+        <p>Ingresa la contraseña de administración para monitorear respuestas y editar el curso.</p>
+        <form id="adminLoginForm">
+          <label for="adminPasswordInput">Contraseña</label>
+          <input id="adminPasswordInput" type="password" autocomplete="current-password" required />
+          <button class="primary" type="submit">Entrar al panel</button>
+        </form>
+        <span id="adminLoginMessage"></span>
+      </section>
+
+      <main id="adminApp" class="admin-main hidden">
+        <section class="panel admin-mode-tabs">
+          <button class="admin-mode active" type="button" data-view="monitorView">Monitoreo</button>
+          <button class="admin-mode" type="button" data-view="courseView">Curso</button>
+          <button class="admin-mode" type="button" data-view="questionsView">Reactivos</button>
+          <button class="admin-mode" type="button" data-view="participantsView">Participantes</button>
+        </section>
+
+        <section id="monitorView" class="admin-section">
+          <section class="panel admin-summary">
+            <div class="metric sky-card"><strong id="adminActive">0</strong><span>participantes activos</span></div>
+            <div class="metric mint"><strong id="adminFinished">0</strong><span>finalizados</span></div>
+            <div class="metric violet"><strong id="adminAverage">0%</strong><span>promedio</span></div>
+            <div class="metric mango"><strong id="adminSurvey">0</strong><span>encuestas completas</span></div>
+          </section>
+
+          <section class="panel admin-tools">
+            <div>
+              <label for="adminSearch">Buscar</label>
+              <input id="adminSearch" type="search" placeholder="Nombre, folio, sede, carrera o usuario" />
+            </div>
+            <div>
+              <label for="adminFilter">Estado</label>
+              <select id="adminFilter">
+                <option value="all">Todos</option>
+                <option value="active">Activos</option>
+                <option value="finished">Finalizados</option>
+                <option value="pending">Sin iniciar</option>
+              </select>
+            </div>
+            <button id="adminExport" class="secondary" type="button">Exportar CSV</button>
+          </section>
+
+          <section class="panel admin-table-wrap">
+            <div class="admin-table-head">
+              <h2>Respuestas en vivo</h2>
+              <span id="adminUpdated">Esperando datos...</span>
+            </div>
+            <div class="table-scroll">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Usuario</th>
+                    <th>Participante</th>
+                    <th>Estado</th>
+                    <th>Progreso</th>
+                    <th>Aciertos</th>
+                    <th>Última respuesta</th>
+                    <th>Encuesta</th>
+                  </tr>
+                </thead>
+                <tbody id="adminRows"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="panel admin-table-wrap">
+            <div class="admin-table-head">
+              <h2>Resumen de encuesta</h2>
+              <span>Conteo por opción</span>
+            </div>
+            <div id="surveySummary" class="survey-summary"></div>
+          </section>
+        </section>
+
+        <section id="courseView" class="admin-section hidden">
+          <form id="courseForm" class="panel editor-form">
+            <h2>Configuración del curso</h2>
+            <label>Nombre de la plataforma</label>
+            <input id="coursePlatform" />
+            <label>Institución</label>
+            <input id="courseOrganization" />
+            <label>Subtítulo</label>
+            <input id="courseSubtitleInput" />
+            <label>Nombre del curso a evaluar</label>
+            <input id="courseNameInput" />
+            <label>Título del examen</label>
+            <input id="courseExamTitle" />
+            <button class="primary" type="submit">Guardar curso</button>
+          </form>
+          <form id="newCourseForm" class="panel editor-form">
+            <h2>Nuevo curso o cuestionario</h2>
+            <label>Nombre del curso</label>
+            <input id="newCourseTitle" placeholder="Ej. Curso interdisciplinario de salud" />
+            <label>Nombre del cuestionario</label>
+            <input id="newEvaluationTitle" placeholder="Ej. Salud renal" />
+            <button class="secondary" type="submit">Agregar a la portada</button>
+          </form>
+        </section>
+
+        <section id="questionsView" class="admin-section hidden">
+          <div class="editor-grid">
+            <form id="questionForm" class="panel editor-form">
+              <h2>Agregar o modificar reactivo</h2>
+              <label>Cuestionario</label>
+              <select id="questionEvaluationSelect"></select>
+              <label>ID del reactivo</label>
+              <input id="questionId" placeholder="Vacío para crear uno nuevo" />
+              <label>Pregunta</label>
+              <textarea id="questionPromptInput" rows="4"></textarea>
+              <label>Opción A</label>
+              <input id="optionA" />
+              <label>Opción B</label>
+              <input id="optionB" />
+              <label>Opción C</label>
+              <input id="optionC" />
+              <label>Opción D</label>
+              <input id="optionD" />
+              <label>Respuesta correcta</label>
+              <select id="correctOption">
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+                <option>D</option>
+              </select>
+              <label>Retroalimentación</label>
+              <textarea id="questionFeedback" rows="3"></textarea>
+              <label>Anotaciones del administrador</label>
+              <textarea id="questionAnnotation" rows="3"></textarea>
+              <label>Imagen para la pregunta</label>
+              <input id="questionImage" type="file" accept="image/*" />
+              <button class="primary" type="submit">Guardar reactivo</button>
+            </form>
+            <section class="panel admin-table-wrap">
+              <div class="admin-table-head">
+                <h2>Banco de reactivos</h2>
+                <span id="questionCountAdmin">0 reactivos</span>
+              </div>
+              <div id="questionList" class="editor-list"></div>
+            </section>
+          </div>
+        </section>
+
+        <section id="participantsView" class="admin-section hidden">
+          <div class="editor-grid">
+            <form id="participantForm" class="panel editor-form">
+              <h2>Agregar o modificar participante</h2>
+              <label>ID interno</label>
+              <input id="participantIdInput" placeholder="Vacío al crear" />
+              <label>Nombre</label>
+              <input id="participantNameInput" />
+              <label>Sede</label>
+              <input id="participantSiteInput" placeholder="CMU o METROPOLI" />
+              <label>Carrera</label>
+              <input id="participantCareerInput" />
+              <label>Folio</label>
+              <input id="participantFolioInput" />
+              <label>Número de usuario</label>
+              <input id="participantUserInput" placeholder="U001" />
+              <label>Contraseña</label>
+              <input id="participantPasswordInput" />
+              <button class="primary" type="submit">Guardar participante</button>
+            </form>
+            <section class="panel admin-table-wrap">
+              <div class="admin-table-head">
+                <h2>Lista oficial y credenciales</h2>
+                <span id="participantCountAdmin">0 participantes</span>
+              </div>
+              <div id="participantAdminList" class="editor-list"></div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app-data.js?v=auditorio2"></script>
+    <script src="admin.js?v=auditorio2"></script>
+  </body>
+</html>
